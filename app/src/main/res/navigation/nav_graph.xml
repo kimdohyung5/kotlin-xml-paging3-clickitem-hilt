@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/pictureListFragment">
+    <fragment
+        android:id="@+id/pictureListFragment"
+        android:name="com.kimdo.picturepaging3withhilt.presentation.PictureListFragment"
+        android:label="PictureListFragment" >
+        <action
+            android:id="@+id/toDetail"
+            app:destination="@id/pictureDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pictureDetailFragment"
+        android:name="com.kimdo.picturepaging3withhilt.presentation.PictureDetailFragment"
+        android:label="fragment_picture_detail"
+        tools:layout="@layout/fragment_picture_detail" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+</navigation>
